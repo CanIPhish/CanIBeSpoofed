@@ -9,9 +9,6 @@ Windows 10 Endpoint or Windows Server 2012+ with .NET Framework 4.5 onwards
 ```
 git clone https://github.com/Rices/CanIBeSpoofed.git
 cd canibespoofed-console\bin\Debug
-powershell (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path; \
- $newpath = $oldpath + ';c:\<INSERT_DIRECTORY_STRUCTURE>\canibespoofed-console\bin\Debug'; \
- Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
 ```
 All done!!
 
