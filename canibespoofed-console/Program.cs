@@ -269,6 +269,7 @@ namespace canibespoofed_console
         {
             DomainParser domainParser = new DomainParser(new WebTldRuleProvider());
             List<string> govDomain = new List<string>();
+            Console.WriteLine("Loading Domain list into memory...");
             using (var reader = new StreamReader(@inputFile))
             {
                 while (!reader.EndOfStream)
@@ -278,6 +279,8 @@ namespace canibespoofed_console
                     Console.WriteLine(fullDomain);
                 }
             }
+            Console.WriteLine("Loading Complete.");
+            Console.WriteLine("");
             return govDomain;
         }
 
@@ -287,11 +290,11 @@ namespace canibespoofed_console
             int i = 1;
             foreach (string uniqueDomain in domainList)
             {
-                Console.WriteLine("Count: {0}", i);
+                Console.WriteLine("-------------------------");
+                Console.WriteLine("Domain Count: {0}", i);
                 i++;
                 SubDomainOutput domainModel = new SubDomainOutput();
                 domainModel.SubDomain = uniqueDomain;
-                Console.WriteLine("-------------------------");
                 Console.WriteLine("Domain Name: {0}", uniqueDomain);
                 SPFParse getSPFDMARC = new SPFParse();
                 SPFDMARCRecord spfDMARC = getSPFDMARC.GetSPFDMARCRecord(domainModel.SubDomain);
@@ -324,6 +327,10 @@ namespace canibespoofed_console
                                 if (issue.severity == "Low")
                                 {
                                     issueSeverity = issue.severity;
+                                }
+                                else if (issue.severity == "Mitigated")
+                                {
+                                    issueSeverity = "Secure";
                                 }
                             }
                         }
