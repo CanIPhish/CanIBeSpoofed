@@ -18,7 +18,7 @@ Options:
 -h, --help         show help message and exit
 -b, --batch        switch used to perform a batch scan against multiple domains
 -o, --output       output scanning results into a JSON formatted file (e.g. -o "C:\results.json") [only applicable when used with the -b switch]
--i, --input        input a pipe delimited list (i.e. .csv file) for batch scanning [only applicable when used with the -b switch]
+-i, --input        input a pipe delimited list (e.g. -i "domainList.csv") for batch scanning [only applicable when used with the -b switch]
 
 Example Usage (Single Domain Supply Chain Scan): canibespoofed-console github.com
 Example Usage (Bulk Domain High-level Scan): canibespoofed-console -b -i "C:\domainListing.csv" -o "C:\results.json"
