@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nager.PublicSuffix</name>
+    </assembly>
+    <members>
+        <member name="T:Nager.PublicSuffix.DomainDataStructure">
+            <summary>
+            Represents a tree of TLD domains
+            </summary>
+        </member>
+        <member name="P:Nager.PublicSuffix.DomainDataStructure.Domain">
+            <summary>
+            The TLD Domain
+            </summary>
+        </member>
+        <member name="P:Nager.PublicSuffix.DomainDataStructure.TldRule">
+            <summary>
+            The type of TLD Domain. <see cref="P:Nager.PublicSuffix.DomainDataStructure.TldRule"/>.
+            </summary>
+        </member>
+        <member name="P:Nager.PublicSuffix.DomainDataStructure.Nested">
+            <summary>
+            The children of this TLD Domain
+            </summary>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainDataStructure.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Nager.PublicSuffix.DomainDataStructure"/> for <paramref name="domain"/>.
+            </summary>
+            <param name="domain">The Domain.</param>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainDataStructure.#ctor(System.String,Nager.PublicSuffix.TldRule)">
+            <summary>
+            Creates a new <see cref="T:Nager.PublicSuffix.DomainDataStructure"/> for <paramref name="domain"/>.
+            </summary>
+            <param name="domain">The Domain.</param>
+            <param name="tldRule">The type of TLD domain.</param>
+        </member>
+        <member name="T:Nager.PublicSuffix.DomainParser">
+            <summary>
+            A TLD Domain parser
+            </summary>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainParser.#ctor(System.Collections.Generic.IEnumerable{Nager.PublicSuffix.TldRule},Nager.PublicSuffix.IDomainNormalizer)">
+            <summary>
+            Creates and Initializes a DomainParse.
+            </summary>
+            <param name="rules">The list of rules.</param>
+            <param name="domainNormalizer">An <see cref="T:Nager.PublicSuffix.IDomainNormalizer"/>.</param>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainParser.#ctor(Nager.PublicSuffix.ITldRuleProvider,Nager.PublicSuffix.IDomainNormalizer)">
+            <summary>
+            Creates and initializes a DomainParser.
+            </summary>
+            <param name="ruleProvider">A <see cref="T:Nager.PublicSuffix.TldRule"/> provider.</param>
+            <param name="domainNormalizer">An <see cref="T:Nager.PublicSuffix.IDomainNormalizer"/>.</param>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainParser.#ctor(Nager.PublicSuffix.DomainDataStructure,Nager.PublicSuffix.IDomainNormalizer)">
+            <summary>
+            Creates a DomainParser based on an already initialzed tree.
+            </summary>
+            <param name="initializedDataStructure">An already initialized tree.</param>
+            <param name="domainNormalizer">An <see cref="T:Nager.PublicSuffix.IDomainNormalizer"/>.</param>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainParser.Get(System.Uri)">
+            <summary>
+            Tries to get a Domain from <paramref name="domain"/>.
+            </summary>
+            <param name="domain">The domain to parse.</param>
+            <returns><strong>null</strong> if <paramref name="domain"/> it's invalid.</returns>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainParser.Get(System.String)">
+            <summary>
+            Tries to get a Domain from <paramref name="domain"/>.
+            </summary>
+            <param name="domain">The domain to parse.</param>
+            <returns><strong>null</strong> if <paramref name="domain"/> it's invalid.</returns>
+        </member>
+        <member name="M:Nager.PublicSuffix.DomainParser.IsValidDomain(System.String)">
+            <summary>
+            Return whether <paramref name="domain"/> is valid or not.
+            </summary>
+            <param name="domain">The domain to check.</param>
+            <returns><strong>true</strong> if <paramref name="domain"/> it's valid.</returns>
+        </member>
+        <member name="T:Nager.PublicSuffix.Extensions.DomainDataStructureExtensions">
+            <summary>
+            <see cref="T:Nager.PublicSuffix.DomainDataStructure"/> extension methods to create the TLD Tree.
+            </summary>
+        </member>
+        <member name="M:Nager.PublicSuffix.Extensions.DomainDataStructureExtensions.AddRules(Nager.PublicSuffix.DomainDataStructure,System.Collections.Generic.IEnumerable{Nager.PublicSuffix.TldRule})">
+            <summary>
+            Add all the rules in <paramref name="tldRules"/> to <paramref name="structure"/>.
+            </summary>
+            <param name="structure">The structure to appened the rule.</param>
+            <param name="tldRules">The rules to append.</param>
+        </member>
+        <member name="M:Nager.PublicSuffix.Extensions.DomainDataStructureExtensions.AddRule(Nager.PublicSuffix.DomainDataStructure,Nager.PublicSuffix.TldRule)">
+            <summary>
+            Add <paramref name="tldRule"/> to <paramref name="structure"/>.
+            </summary>
+            <param name="structure">The structure to appened the rule.</param>
+            <param name="tldRule">The rule to append.</param>
+        </member>
+        <member name="M:Nager.PublicSuffix.ITldRuleProvider.BuildAsync">
+            <summary>
+            Builds the list of TldRules
+            </summary>
+            <returns>List of TldRules</returns>
+        </member>
+        <member name="T:Nager.PublicSuffix.ParseException">
+            <summary>
+            Parse Exception
+            </summary>
+        </member>
+        <member name="P:Nager.PublicSuffix.ParseException.WinningRule">
+            <summary>
+            Reason of exception
+            </summary>
+        </member>
+        <member name="P:Nager.PublicSuffix.ParseException.ErrorMessage">
+            <summary>
+            Reason of exception
+            </summary>
+        </member>
+        <member name="M:Nager.PublicSuffix.ParseException.#ctor(System.String,Nager.PublicSuffix.TldRule)">
+            <summary>
+            Parse Exception
+            </summary>
+            <param name="errorMessage"></param>
+            <param name="winningRule"></param>
+        </member>
+        <member name="P:Nager.PublicSuffix.ParseException.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="T:Nager.PublicSuffix.RuleLoadException">
+            <summary>
+            Rule Load Exception
+            </summary>
+        </member>
+        <member name="P:Nager.PublicSuffix.RuleLoadException.Error">
+            <summary>
+            Error Message
+            </summary>
+        </member>
+        <member name="M:Nager.PublicSuffix.RuleLoadException.#ctor(System.String)">
+            <summary>
+            Rule Load Exception
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="T:Nager.PublicSuffix.TldRuleDivision">
+            <summary>
+            TLD Rule Division, defined by www.publicsuffix.org
+            </summary>
+        </member>
+        <member name="T:Nager.PublicSuffix.TldRuleType">
+            <summary>
+            TLD Rule type, defined by www.publicsuffix.org
+            </summary>
+        </member>
+    </members>
+</doc>

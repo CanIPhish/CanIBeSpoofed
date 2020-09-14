@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IPAddressRange</name>
+    </assembly>
+    <members>
+        <member name="M:NetTools.Bits.GetBitMaskLength(System.Byte[])">
+            <summary>
+            Counts the number of leading 1's in a bitmask.
+            Returns null if value is invalid as a bitmask.
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetTools.IPAddressRange.#ctor">
+            <summary>
+            Creates an empty range object, equivalent to "0.0.0.0/0".
+            </summary>
+        </member>
+        <member name="M:NetTools.IPAddressRange.#ctor(System.Net.IPAddress)">
+            <summary>
+            Creates a new range with the same start/end address (range of one)
+            </summary>
+            <param name="singleAddress"></param>
+        </member>
+        <member name="M:NetTools.IPAddressRange.#ctor(System.Net.IPAddress,System.Net.IPAddress)">
+            <summary>
+            Create a new range from a begin and end address.
+            Throws an exception if Begin comes after End, or the
+            addresses are not in the same family.
+            </summary>
+        </member>
+        <member name="M:NetTools.IPAddressRange.#ctor(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Creates a range from a base address and mask bits.
+            This can also be used with <see cref="M:NetTools.IPAddressRange.SubnetMaskLength(System.Net.IPAddress)"/> to create a
+            range based on a subnet mask.
+            </summary>
+            <param name="baseAddress"></param>
+            <param name="maskLength"></param>
+        </member>
+        <member name="M:NetTools.IPAddressRange.SubnetMaskLength(System.Net.IPAddress)">
+            <summary>
+            Takes a subnetmask (eg, "255.255.254.0") and returns the CIDR bit length of that
+            address. Throws an exception if the passed address is not valid as a subnet mask.
+            </summary>
+            <param name="subnetMask">The subnet mask to use</param>
+            <returns></returns>
+        </member>
+        <member name="M:NetTools.IPAddressRange.ToString">
+            <summary>
+            Returns the range in the format "begin-end", or 
+            as a single address if End is the same as Begin.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetTools.IPAddressRange.ToCidrString">
+            <summary>
+            Returns a Cidr String if this matches exactly a Cidr subnet
+            </summary>
+        </member>
+        <member name="M:NetTools.IPAddressRange.AsEnumerable">
+            <summary>
+            Returns the input typed as IEnumerable&lt;IPAddress&gt;
+            </summary>
+        </member>
+    </members>
+</doc>

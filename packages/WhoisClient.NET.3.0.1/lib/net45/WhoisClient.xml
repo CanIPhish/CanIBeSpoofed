@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WhoisClient</name>
+    </assembly>
+    <members>
+        <member name="T:Whois.NET.WhoisClient">
+            <summary>
+            A WhoisClient structure for quering whois servers.
+            </summary>
+        </member>
+        <member name="F:Whois.NET.WhoisClient._hasReferralRegex">
+            <summary>
+            The has referral.
+            </summary>
+        </member>
+        <member name="M:Whois.NET.WhoisClient.Query(System.String,System.String,System.Int32,System.Text.Encoding,System.Int32,System.Int32)">
+            <summary>
+            Send WHOIS query to WHOIS server, requery to referral servers recursive, and return the response from WHOIS server.
+            </summary>
+            <param name="query">domain name (ex."nic.ad.jp")or IP address (ex."192.41.192.40") to be queried.</param>
+            <param name="server">FQDN of whois server (ex."whois.arin.net"). This parameter is optional (default value is null) to determine server automatically.</param>
+            <param name="port">TCP port number to connect whois server. This parameter is optional, and default value is 43.</param>
+            <param name="encoding">Encoding method to decode the result of query. This parameter is optional (default value is null) to using ASCII encoding.</param>
+            <param name="timeout">A timespan to limit the connection attempt, in seconds.</param>
+            <param name="retries">The number of times a connection will be attempted.</param>
+            <returns>The strong typed result of query which responded from WHOIS server.</returns>
+        </member>
+        <member name="M:Whois.NET.WhoisClient.QueryAsync(System.String,System.String,System.Int32,System.Text.Encoding,System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Send WHOIS query to WHOIS server, requery to referral servers recursive, and return the response from WHOIS server.
+            </summary>
+            <param name="query">domain name (ex."nic.ad.jp")or IP address (ex."192.41.192.40") to be queried.</param>
+            <param name="server">FQDN of whois server (ex."whois.arin.net"). This parameter is optional (default value is null) to determine server automatically.</param>
+            <param name="port">TCP port number to connect whois server. This parameter is optional, and default value is 43.</param>
+            <param name="encoding">Encoding method to decode the result of query. This parameter is optional (default value is null) to using ASCII encoding.</param>
+            <param name="timeout">A timespan to limit the connection attempt, in seconds.</param>
+            <param name="retries">The number of times a connection will be attempted.</param>
+            <param name="token">The token to monitor for cancellation requests.</param>
+            <returns>The strong typed result of query which responded from WHOIS server.</returns>
+        </member>
+        <member name="M:Whois.NET.WhoisClient.QueryRecursive(System.String,System.Collections.Generic.List{System.String},System.Int32,System.Text.Encoding,System.Int32,System.Int32)">
+            <summary>
+            Queries recursively to determine the proper endpoint for an IP or domain.
+            </summary>
+            <param name="query">The query for the whois server.</param>
+            <param name="servers">The list of servers previously queried.</param>
+            <param name="port">The port to query.</param>
+            <param name="encoding">The encoding to use during the query.</param>
+            <param name="timeout">A timespan to limit the connection attempt, in seconds.</param>
+            <param name="retries">The number of times a connection will be attempted.</param>
+            <returns>A whois response structure containing the results of the whois queries.</returns>
+        </member>
+        <member name="M:Whois.NET.WhoisClient.QueryRecursiveAsync(System.String,System.Collections.Generic.List{System.String},System.Int32,System.Text.Encoding,System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Queries recursively to determine the proper endpoint for an IP or domain.
+            </summary>
+            <param name="query">The query for the whois server.</param>
+            <param name="servers">The list of servers previously queried.</param>
+            <param name="port">The port to query.</param>
+            <param name="encoding">The encoding to use during the query.</param>
+            <param name="timeout">A timespan to limit the connection attempt, in seconds.</param>
+            <param name="retries">The number of times a connection will be attempted.</param>
+            <param name="token">The token to monitor for cancellation requests.</param>
+            <returns>A whois response structure containing the results of the whois queries.</returns>
+        </member>
+        <member name="M:Whois.NET.WhoisClient.HasReferral(System.String,System.String,System.String@,System.Int32@)">
+            <summary>
+            Check if a response contains a referral.
+            </summary>
+            <param name="rawResponse">
+            The raw response.
+            </param>
+            <param name="currentServer"></param>
+            <param name="refSvr"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:Whois.NET.WhoisClient.RawQuery(System.String,System.String,System.Int32,System.Text.Encoding,System.Int32)">
+            <summary>
+            Send simple WHOIS query to WHOIS server, and return the response from WHOIS server.
+            (No requery to referral servers, and No parse the result of query.)
+            </summary>
+            <param name="query">domain name (ex."nic.ad.jp")or IP address (ex."192.41.192.40") to be queried.</param>
+            <param name="server">FQDN of whois server (ex."whois.arin.net").</param>
+            <param name="port">TCP port number to connect whois server. This parameter is optional, and default value is 43.</param>
+            <param name="encoding">Encoding method to decode the result of query. This parameter is optional (default value is null) to using ASCII encoding.</param>
+            <param name="timeout">A timespan to limit the connection attempt, in seconds.  Function returns empty string if it times out.</param>
+            <returns>The raw data decoded by encoding parameter from the WHOIS server that responded, or an empty string if a connection cannot be established.</returns>
+        </member>
+        <member name="M:Whois.NET.WhoisClient.RawQueryAsync(System.String,System.String,System.Int32,System.Text.Encoding,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Send simple WHOIS query to WHOIS server, and return the response from WHOIS server.
+            (No requery to referral servers, and No parse the result of query.)
+            </summary>
+            <param name="query">domain name (ex."nic.ad.jp")or IP address (ex."192.41.192.40") to be queried.</param>
+            <param name="server">FQDN of whois server (ex."whois.arin.net").</param>
+            <param name="port">TCP port number to connect whois server. This parameter is optional, and default value is 43.</param>
+            <param name="encoding">Encoding method to decode the result of query. This parameter is optional (default value is null) to using ASCII encoding.</param>
+            <param name="timeout">A timespan to limit the connection attempt, in seconds.  Function returns empty string if it times out.</param>
+            <param name="token">The token to monitor for cancellation requests.</param>
+            <returns>The raw data decoded by encoding parameter from the WHOIS server that responded, or an empty string if a connection cannot be established.</returns>
+        </member>
+        <member name="T:Whois.NET.WhoisResponse">
+            <summary>
+            A structure containing the whois response information.
+            </summary>
+        </member>
+        <member name="P:Whois.NET.WhoisResponse.RespondedServers">
+            <summary>
+            FQDN of WHOIS servers which sent query. The last element is the WHOIS server name that latest queried.
+            </summary>
+        </member>
+        <member name="M:Whois.NET.WhoisResponse.#ctor">
+            <summary>
+            A default constructor.
+            </summary>
+        </member>
+        <member name="M:Whois.NET.WhoisResponse.#ctor(System.String[],System.String)">
+            <summary>
+            A constructor that parses the provided response information.
+            </summary>
+            <param name="responsedServers">The servers that responded to the request.</param>
+            <param name="rawWhoisResponse">The raw response from the last server.</param>
+        </member>
+    </members>
+</doc>
