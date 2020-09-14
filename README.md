@@ -12,6 +12,19 @@ cd canibespoofed-console\bin\Debug
 ```
 All done!!
 
+## Usage
+```Usage: canibespoofed-console [Options] <domain>
+Options:
+-h, --help         show help message and exit
+-b, --batch        switch used to perform a batch scan against multiple domains
+-o, --output       output scanning results into a JSON formatted file (e.g. -o "C:\results.json") [only applicable when used with the -b switch]
+-i, --input        input a pipe delimited list (e.g. -i "domainList.csv") for batch scanning [only applicable when used with the -b switch]
+
+Example Usage (Single Domain Supply Chain Scan): canibespoofed-console github.com
+Example Usage (Bulk Domain High-level Scan): canibespoofed-console -b -i "C:\domainListing.csv" -o "C:\results.json"
+```
+![](/images/Usage.PNG)
+
 ## What core features does canibespoofed provide?
 The core features can be broken into 4 categories. It's through the aggregation of these features that we gain a full picture of your email infrastructure. The categories are as follows:
 ### 1. Identifying SPF & DMARC Issues
@@ -31,24 +44,13 @@ We subscribe to multiple IP-driven blacklists which identify IPs that are associ
 * Hijacked endpoints infected by illegal 3rd party exploits, including open proxies (HTTP, socks, AnalogX, wingate, etc), worms/viruses with built-in spam engines, and other types of trojan-horse exploits.
 * End-user (non-MTA) addresses which are dynamically allocated to residential users (i.e. Low Reputation Senders)
 
-## Usage
-```Usage: canibespoofed-console [Options] <domain>
-Options:
--h, --help         show help message and exit
--b, --batch        switch used to perform a batch scan against multiple domains
--o, --output       output scanning results into a JSON formatted file (e.g. -o "C:\results.json") [only applicable when used with the -b switch]
--i, --input        input a pipe delimited list (e.g. -i "domainList.csv") for batch scanning [only applicable when used with the -b switch]
+## Example Queries
 
-Example Usage (Single Domain Supply Chain Scan): canibespoofed-console github.com
-Example Usage (Bulk Domain High-level Scan): canibespoofed-console -b -i "C:\domainListing.csv" -o "C:\results.json"
-```
-![](/images/Usage.PNG)
-
-### Supply Chain Query and Output (ex. github.com)
+### Supply Chain Query & Vulnerability Analysis (ex. github.com)
 
 ![](/images/SupplyChainScan.PNG)
 
-### Batch File Query and Output (ex. Top 5 Most Visited Domains)
+### Batch File Query & Vulnerability Analysis (ex. Top 5 Most Visited Domains)
 
 #### Input File:
 
