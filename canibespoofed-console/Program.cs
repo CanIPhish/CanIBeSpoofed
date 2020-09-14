@@ -381,9 +381,9 @@ namespace canibespoofed_console
                     "\n\nUsage: canibespoofed-console [Options] <domain>" +
                     "\nOptions:" +
                     "\n-h, --help         show help message and exit" +
-                    "\n-b, --batch        input a pipe delimited list in-place of <filename> for scanning automation" +
-                    "\n-o, --output       output scanning results into a comma delimited file (e.g. -o \"C:\\results.csv\")" +
-                    "\n-v, --verbose      output the verbose analysis to console" +
+                    "\n-b, --batch        switch used to perform a batch scan against multiple domains" +
+                    "\n-o, --output       output scanning results into a JSON formatted file (e.g. -o \"C:\\results.json\") [only applicable when used with the -b switch]" +
+                    "\n-i, --input        input a pipe delimited list (i.e. .csv file) for batch scanning [only applicable when used with the -b switch]" +
                     "\n\n" +
                     "Example Usage (Single Domain Supply Chain Scan): canibespoofed-console github.com\n" +
                     "Example Usage (Bulk Domain High-level Scan): canibespoofed-console -b -i \"C:\\domainListing.csv\" -o \"C:\\results.json\"");
