@@ -373,7 +373,7 @@ namespace canibespoofed_console
         private static void HelpMessage()
         {
             Console.WriteLine("canibespoofed-console 0.01 - see https://github.com/Rices/CanIBeSpoofed for updates \n\n" +
-                    "canibespoofed-console is a lightweight wrapper utilising functionality from the canibespoofed \n" +
+                    "canibespoofed-console is a console project utilising functionality built for the canibespoofed \n" +
                     "website. This project facilitates scanning of domains to gain visibility over email supply chain and  \n" +
                     "SPF/DMARC vulnerabilities. See https://canibespoofed.com/Home/Features for a full list of capabilities \n" +
                     "the console project can demonstrate. The console project is designed for use by Information Security professionals\n" +
