@@ -46,20 +46,20 @@ We subscribe to multiple IP-driven blacklists which identify IPs that are associ
 
 ## Example Queries
 
-### Supply Chain Query & Vulnerability Analysis (ex. github.com)
+### 1. Supply Chain Query & Vulnerability Analysis (ex. github.com)
 
 ![](/images/SupplyChainScan.PNG)
 
-### Batch File Query & Vulnerability Analysis (ex. Top 5 Most Visited Domains)
+### 2. Batch File Query & Vulnerability Analysis (ex. Top 5 Most Visited Domains)
 
-#### Input File:
+#### 2.1 Input File:
 
 ![](/images/InputFile.PNG)
 
-#### Query:
+#### 2.2 Query:
 
 ![](/images/BatchScan.PNG)
 
-#### Output:
+#### 2.3 Output:
 
 ![](/images/outputFile.PNG)
