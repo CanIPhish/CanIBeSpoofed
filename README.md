@@ -10,7 +10,7 @@ Windows 10 Endpoint or Windows Server 2012+ with .NET Framework 4.5 onwards
 git clone https://github.com/Rices/CanIBeSpoofed.git
 cd canibespoofed-console\bin\Debug
 ```
-All done!!
+Note: To provide the IP geolocation functionality, the free API @ https://ipgeolocation.io/ is leveraged. However the free API key within the project is limited to 1000 calls a day (between 20-50 domain SPF lookups). It's likely this limit will be hit so I highly recommend creating a free account at IPGeolocation and replacing the listed API key under Geolocation.cs. Once saved, rebuild the project through Visual Studio and scan at will :)
 
 ## Usage
 ```Usage: canibespoofed-console [Options] <domain>
