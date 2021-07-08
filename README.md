@@ -1,4 +1,4 @@
-## What is canibespoofed-console
+## What is CanIBeSpoofed
 
 canibespoofed-console is a console project utilising functionality built for the https://canibespoofed.com/ website. This project facilitates scanning of domains to gain visibility over email supply chain and SPF/DMARC vulnerabilities. See https://canibespoofed.com/Home/Features for a full list of capabilities the console project can demonstrate. The console project is designed for use by Information Security professionals who need to scan domains in a more automated fashion than is readily available through the web gui.
 
