@@ -1,5 +1,5 @@
 ## What is CanIPhish
-CanIPhish are the maintainers of this open source project. To check out the service we provide, please see: https://caniphish.com/caniphish-vs-open-source-phishing
+CanIPhish are the maintainers of this open source project. To check out the service we provide, please see: [https://caniphish.com/caniphish-vs-open-source-phishing](https://caniphish.com/open-source-phishing-simulation-tools)
 
 ## What is CanIBeSpoofed
 
