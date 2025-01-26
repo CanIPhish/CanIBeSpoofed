@@ -66,3 +66,93 @@ We subscribe to multiple IP-driven blacklists which identify IPs that are associ
 #### 2.3 Output:
 
 ![](/images/outputFile.PNG)
+
+## Licensing
+CanIPhish Non-Commercial License (Version 1.0)
+
+Copyright (c) 2025 Can I Phish Pty Ltd
+All rights reserved.
+
+1. Definitions
+   1.1. "Software" refers to the source code, object code, and/or documentation 
+        made available under this license, titled “CanIBeSpoofed,” along with 
+        any modifications or derivative works thereof.
+   1.2. "Non-Commercial" use means personal, educational, research, or 
+        charitable usage where no direct or indirect commercial advantage 
+        or monetary compensation is sought.
+   1.3. "Commercial Use" means any usage of the Software, or derivative 
+        works thereof, that:
+        (a) is performed for profit, revenue generation, or any monetary 
+            compensation; or 
+        (b) is integrated into a product or service that is sold, licensed, 
+            or otherwise provided for a fee.
+   1.4. "Licensee" refers to any person or entity exercising permissions 
+        granted by this license.
+
+2. License Grant (Non-Commercial)
+   2.1. Subject to the terms and conditions of this License, the Licensor 
+        hereby grants Licensee a worldwide, royalty-free, non-exclusive, 
+        revocable license to:
+        (a) Use and reproduce the Software, in whole or in part, solely for 
+            Non-Commercial purposes;
+        (b) Modify and create derivative works of the Software, in whole 
+            or in part, solely for Non-Commercial purposes; and
+        (c) Distribute copies of the Software and any modifications or 
+            derivative works thereof, in source or object form, solely for 
+            Non-Commercial purposes, provided that Licensee includes a copy 
+            of this License and retains all applicable copyright and 
+            trademark notices.
+
+3. Commercial Use Prohibited Without Approval
+   3.1. Licensee may not use the Software or any derivative works thereof 
+        for Commercial Use without obtaining an express written permission 
+        or commercial license from the Licensor.
+   3.2. To inquire about Commercial Use, please contact the Licensor at:
+        support@caniphish.com
+
+4. Compliance with Other Licenses
+   4.1. If the Licensee incorporates any third-party code or libraries 
+        into the Software or derivatives, the Licensee is solely responsible 
+        for compliance with any open source or proprietary licenses that 
+        may apply to those components.
+   4.2. This License applies only to code authored by or contributed to 
+        the Software by the Licensor and does not supersede any other 
+        party’s rights in such third-party code.
+
+5. Disclaimer of Warranty
+   5.1. THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS 
+        OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. 
+        IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR 
+        OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+        ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
+        OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. Limitation of Liability
+   6.1. TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL THE LICENSOR 
+        BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL 
+        DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE SOFTWARE, 
+        EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+7. Termination
+   7.1. This License and the rights granted hereunder will terminate 
+        automatically if the Licensee fails to comply with any term herein.
+   7.2. Upon termination, the Licensee must cease all use and distribution 
+        of the Software and destroy or return all copies, full or partial.
+
+8. Governing Law & Jurisdiction
+   8.1. This License shall be governed by and interpreted in accordance 
+        with the laws of Queensland, Australia, without regard to 
+        its conflict of law provisions.
+   8.2. Any legal action or proceeding relating to this License shall be 
+        brought exclusively in the courts located in Queensland, Australia,
+        and each party consents to the jurisdiction of such courts.
+
+10. Entire Agreement
+   9.1. This License constitutes the entire agreement between the Licensee 
+        and the Licensor regarding the subject matter herein and supersedes 
+        all prior understandings or agreements. Any modifications to this 
+        License must be in writing and signed by both parties.
+
+BY USING OR DISTRIBUTING THE SOFTWARE, YOU INDICATE YOUR ACCEPTANCE OF 
+THIS LICENSE. IF YOU DO NOT AGREE TO THE TERMS, DO NOT USE THE SOFTWARE.
